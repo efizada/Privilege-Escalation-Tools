@@ -1,0 +1,72 @@
+Windows
+Command Prompt (cmd.exe) / PowerShell:
+
+whoami - Displays the current user.
+net user - Lists user accounts on the system.
+net localgroup administrators - Lists the members of the local administrators group.
+tasklist - Lists running processes.
+taskkill /pid <pid> /f - Kills a process by its PID.
+ipconfig /all - Displays detailed network information.
+systeminfo - Displays system configuration.
+get-process (PowerShell) - Lists running processes.
+get-content <file> (PowerShell) - Reads contents of a file.
+invoke-webrequest <url> (PowerShell) - Downloads data from a URL.
+Windows Management Instrumentation (WMI):
+
+wmic process list - Lists running processes.
+wmic useraccount get name,sid - Lists user accounts and their SIDs.
+Registry Commands:
+
+reg query - Queries the registry.
+reg add - Adds new entries in the registry.
+reg delete - Deletes entries from the registry.
+Linux/Unix
+Bash & Other Shells:
+whoami - Displays the current user.
+id - Displays user identity.
+ifconfig or ip a - Displays network configuration.
+ps aux - Lists running processes.
+kill -9 <pid> - Kills a process by PID.
+cat /etc/passwd - Displays contents of the passwd file.
+netstat -tulnp - Lists open network connections.
+uname -a - Displays system information.
+sudo - Executes a command with superuser privileges.
+Networking Commands:
+nmap - Network scanning tool.
+ssh - Secure shell access to remote machines.
+File Manipulation:
+cat - Concatenates and displays files.
+touch - Updates file timestamps or creates new files.
+rm - Removes files or directories.
+cp - Copies files or directories.
+mv - Moves or renames files or directories.
+chmod - Changes file access permissions.
+chown - Changes file owner and group.
+Privilege Escalation:
+sudo su or su - Switch user to root.
+Exploits such as buffer overflow exploits to gain higher privileges.
+Cross-platform (often used by malware or scripts):
+Python/Ruby/Perl Scripts:
+import os followed by os.system('command') - Executes a system command.
+subprocess.run(['command']) or similar in Python.
+Exploits and Payloads:
+Usage of Metasploit Framework for deploying payloads.
+Custom exploits to take advantage of system vulnerabilities.
+Remote Access Tools:
+Metasploit:
+
+Commands like exploit, use, and sessions.
+Cobalt Strike:
+
+Commands for creating beacons, payload delivery, and internal network pivoting.
+Other RATs (Remote Access Trojans):
+
+Commands vary but typically include features for screen capture, keystroke logging, file manipulation, etc.
+Lateral Movement and Persistence:
+PsExec/WinRM (Windows Remote Management)
+
+psexec \\target cmd
+winrs -r:target command
+Remote Desktop Protocol (RDP):
+
+mstsc /v:target - Opens a Remote Desktop session.
